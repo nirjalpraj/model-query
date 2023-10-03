@@ -46,48 +46,27 @@ function App() {
               </Typography>
             </Grid>
           </Grid>
-          {/* <Grid item xs={12}>
-            <Typography variant="h5">Write your query...</Typography>
-          </Grid> */}
-          <Grid container item xs={12}>
-            <Grid item xs={9}>
-              <TextField
-                multiline
-                rows={10}
-                label="What's in your mind?"
-                fullWidth
-              />
+          <Grid item xs={12}>
+            <Typography variant="h5" fontWeight={550} color={"#135A70"}>
+              Upload a file
+            </Typography>
+          </Grid>
+          <Grid container spacing={4} item xs={12}>
+            <Grid item xs={5}>
+              <TextField label="What's in your mind?" fullWidth />
             </Grid>
-            <Grid
-              container
-              direction="column"
-              spacing={10}
-              item
-              xs={3}
-              alignItems="center"
-            >
-              <Grid item>
-                <Stack spacing={1}>
-                  <span>Select Model</span>
-                  <Select
-                    labelId="demo-select-small-label"
-                    id="demo-select-small"
-                    value={age}
-                    style={{ minWidth: 250 }}
-                    label="Age"
-                    onChange={handleChange}
-                  >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                  </Select>
-                </Stack>
-              </Grid>
-              <Grid item>
-                <Button type="submit" variant="outlined">
-                  Submit
+            <Grid item xs={3}>
+              <Stack direction="row" spacing={2}>
+                <Button
+                  variant="contained"
+                  style={{ backgroundColor: "#135A70" }}
+                >
+                  Browse
                 </Button>
-              </Grid>
+                <Button variant="contained" color="success">
+                  Upload
+                </Button>
+              </Stack>
             </Grid>
           </Grid>
         </Grid>
