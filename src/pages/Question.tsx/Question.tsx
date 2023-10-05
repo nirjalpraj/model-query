@@ -1,13 +1,6 @@
-import { TextFormat } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  Grid,
-  Input,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import { Box, Button, Grid, Stack, TextField, Typography } from "@mui/material";
 import React from "react";
 
 const Question = () => {
@@ -31,11 +24,13 @@ const Question = () => {
             height: "60vh",
             marginLeft: 5,
             marginRight: 2,
+            paddingRight: 2,
             overflowY: "scroll",
           }}
         >
           <Grid container spacing={4}>
             <Grid item xs={12} marginTop={5}>
+              <PermIdentityIcon sx={{ color: "#135A70" }} />
               <Typography
                 style={{
                   backgroundColor: "#135A70",
@@ -51,7 +46,14 @@ const Question = () => {
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography>
+              <SmartToyIcon sx={{ color: "#135A70" }} />
+              <Typography
+                border={2}
+                borderColor={"#135A70"}
+                padding={2}
+                borderRadius={2}
+                textAlign={"justify"}
+              >
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae
@@ -73,7 +75,12 @@ const Question = () => {
         </Box>
         <Grid container gap={4} alignItems={"center"} justifyContent={"center"}>
           <Grid item xs={9}>
-            <TextField fullWidth label="Write your query..." />
+            <TextField
+              id="query"
+              name="query"
+              fullWidth
+              label="Write your query..."
+            />
           </Grid>
           <Grid item xs={2} justifySelf={"center"}>
             <Button variant="contained" sx={{ backgroundColor: "#135A70" }}>
